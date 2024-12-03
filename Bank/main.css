@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("images/yh.webp");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+}
+
+
+nav{
+    display: flex;
+    position: sticky;
+
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ul a:hover{
+    color: rgb(92, 87, 87);
+    text-decoration: underline;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    margin-left: 100%;
+}
+
+li{
+    padding: 30px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav img{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 100px;
+    bottom: px;
+}
+
+
+nav svg:hover{
+    transform: scale(1);
+    fill: rgb(70, 2, 61);
+    transition: ease 1s;
+}
+
+main{
+    text-align: center;
+}
+
+.mainer{
+    display: flex;
+}
+
+.mainer .lands{
+    margin: 40px auto;
+}
+
+#profile{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+}
+
+.marks .container{
+    margin: 10px;
+}
+
+.marks .nums, .marks .class{
+    position: relative;
+    font-size: 0.8rem;
+    left: 55px;
+    bottom: 4px;
+}
+
+
+.contain .class{
+    position: relative;
+    bottom: 10px;
+}
+
+.nums{
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.marks button{
+    position: relative;
+    height: 40px;
+    width: 117px;
+    left: 115px;
+    bottom: 20px;
+    cursor: pointer;
+    font-size: 0,9rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: 2px solid rgb(92, 87, 87);
+    background-color: rgb(92, 87, 87);
+    color: white;
+    border-radius: 5px;
+}
+
+.marks button:hover{
+    background-color: white;
+    color: rgb(92, 87, 87);
+    transition: ease-in-out 1s;
+}
+
+
+.mainer img{
+    width: 400px;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+main h1{
+    color: rgb(92, 87, 87);
+}
+
+
+section h1{
+    color: rgb(92, 87, 87);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.contain{
+    margin-top: 50px;
+}
+
+.marks .locate{
+    width: 298px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.marks{
+    border: 2px solid gray;
+    border-radius: 15px;
+    height: 380px;
+    width: 300px;
+    margin: 20px;
+}
+
+.marks:hover{
+    border: 2px solid black;
+}
+
+.marks svg{
+    cursor: pointer;
+    fill: rgb(92, 87, 87);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 5px;
+}
+
+
+.marks svg:hover{
+    fill: rgb(150, 123, 2);
+    transition: ease 1s;
+}
+
+.main-container{
+    display: flex;
+}
+
+.contact h1, .contact p, .contact h2{
+    padding: 30px;
+    color: white;
+}
+
+.contact svg{
+    fill:white;
+    width: 24px;
+    height: 24px;
+    margin: 20px;
+}
+
+
+.bringings{
+    display: flex;
+}
+
+.about img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 100%;
+    margin-left: 25%;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.about h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.about{
+    color: white;
+    padding: 80px;
+}
+
+
+footer{
+    background-color:  rgb(92, 87, 87);
+    margin-top: 200px;
+    height: 500px;
+}
+
+hr{
+    width: 5px;
+    background: #ccc;
+    position: relative;
+    left: 30px;
+    height: 500px;
+}
+
+footer .top button{
+    position: absolute;
+    left: 86%;
+    top: 2100px;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgb(92, 87, 87);
+    color: white;
+    font-weight: bold;
+}
+
+
+footer .top button a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .top button a:hover{
+    color: rgb(92, 87, 87);
+}
+
+
+footer .top button:hover{
+    color: rgb(92, 87, 87);
+    background-color: white;
+}
+
+
+
+
+@media (max-width: 992px) {
+
+    body{
+        background-image: url("images/yh.webp");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        padding-top: 30px;
+        background-repeat: no-repeat;
+    }
+
+
+    .mainer{
+        margin: 25px;
+    }
+
+
+    .mainer img{
+        margin-top: 10px;
+    }
+
+
+    nav img{
+        width: 150px;
+        height: 150px;
+        left: 50px;
+    }
+
+    form input{
+        width: 250px;
+        position: relative;
+        right: 30px;
+    }
+
+
+    .contact a svg{
+        fill:white;
+        width: 24px;
+        height: 24px;
+        margin: 30px;
+    }
+
+    .bringings{
+        display: block;
+    }
+
+    .contact{
+        position: relative;
+        top: 610px;
+        background-color: rgb(92, 87, 87);
+    }
+
+    .about{
+        background-color: rgb(92, 87, 87);
+        height: 610px;
+        border: 2px solid white;
+        position: absolute;
+        border-right: none;
+        border-left: none;
+         border-top: none;
+        top: 5357px;
+    }
+
+
+    footer .top button{
+        left: 260px;
+        top: 5900px;
+        width: 100px;
+    }
+
+
+
+    .about img{
+        width: 90px;
+        height: 90px;
+        margin: 10px;
+    }
+
+    hr{
+        display: none;
+    }
+
+
+    main{
+        display: block;
+    }
+
+
+    nav img{
+        margin: 10px;
+        height: 120px;
+        width: 120px;
+    }
+
+
+    #links{
+        display: none;
+        position: absolute;
+        height: 140px;
+        left: 70px;
+
+    }
+
+
+    nav #list{
+        position: relative;
+        left: 110px;
+        bottom: 15px;
+        margin: 60px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    nav #hide{
+        display: block;
+        position: absolute;
+        left: 145px;
+        top: 45px;
+        width: 100%;
+        height: 40px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    nav li{
+        padding: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+
+    nav li:hover{
+        color:  rgb(92, 87, 87);
+        text-decoration: underline;
+    }
+
+
+
+
+    #links ul{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+        width: 120px;
+        border-radius: 10px;
+        text-align: right;
+    }
+
+    main h1{
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+    
+
+    .mainer{
+        display: block;
+        margin: auto;
+    }
+
+    .main-container{
+        display: block;
+    }
+
+    #list{
+        display: block;
+    }
+
+    .marks{
+        width: 343px;
+        height: 450px;
+        margin-left: 15px;
+    }
+
+    .lands img{
+        width: 350px;
+    }
+
+    .marks .locate{
+        width: 340px;
+
+    }
+
+    .marks button{
+        left: 120px;
+    }
+}
+
