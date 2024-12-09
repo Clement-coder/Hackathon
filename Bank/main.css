@@ -14,6 +14,22 @@ body{
 }
 
 
+.links .profile{
+    position: relative;
+    left: 1000px;
+    bottom: 65px;
+}
+
+.links svg{
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
 nav{
     display: flex;
     position: sticky;
@@ -105,7 +121,7 @@ main{
     position: relative;
     height: 40px;
     width: 117px;
-    left: 115px;
+    left: 95px;
     bottom: 20px;
     cursor: pointer;
     font-size: 0,9rem;
@@ -148,17 +164,18 @@ section h1{
 }
 
 .marks .locate{
-    width: 298px;
+    width: 276px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    height: 180px;
 }
 
 .marks{
     border: 2px solid gray;
     border-radius: 15px;
     height: 380px;
-    width: 300px;
-    margin: 20px;
+    width: 280px;
+    margin: 18px;
 }
 
 .marks:hover{
@@ -182,6 +199,7 @@ section h1{
 
 .main-container{
     display: flex;
+    width: 500px;
 }
 
 .contact h1, .contact p, .contact h2{
@@ -267,6 +285,54 @@ footer .top button:hover{
 }
 
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+#hide, #list{
+    display: none;
+}
+
+.label {
+    display: block;
+    margin: 10px 0;
+}
+
+
 
 
 @media (max-width: 992px) {
@@ -318,7 +384,7 @@ footer .top button:hover{
 
     .contact{
         position: relative;
-        top: 610px;
+        top: 680px;
         background-color: rgb(92, 87, 87);
     }
 
@@ -329,7 +395,7 @@ footer .top button:hover{
         position: absolute;
         border-right: none;
         border-left: none;
-         border-top: none;
+        border-top: none;
         top: 5357px;
     }
 
@@ -382,6 +448,7 @@ footer .top button:hover{
         width: 40px;
         height: 40px;
         cursor: pointer;
+        display: block;
     }
 
     nav #hide{
@@ -443,7 +510,7 @@ footer .top button:hover{
     .marks{
         width: 343px;
         height: 450px;
-        margin-left: 15px;
+        margin-left: 25px;
     }
 
     .lands img{
@@ -458,5 +525,14 @@ footer .top button:hover{
     .marks button{
         left: 120px;
     }
-}
 
+    #hide{
+        display: none;
+    }
+
+
+    #hide, #list {
+        display: none;
+        fill: black;
+    }
+}

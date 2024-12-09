@@ -1,10 +1,91 @@
-let signupBtn = document.getElementById('signupBtn');
-let signinBtn = document.getElementById('signinBtn');
 let nameField = document.getElementById('nameField');
 let tittle = document.getElementById('tittle');
-let inputName = document.getElementById('inputName'); 
-let passwordField =document.getElementById('inputPassword');
-let emailField =document.getElementById('inputEmail');
+let passwordField = document.getElementById('inputPassword');
+let emailField = document.getElementById('inputEmail');
+let feedback = document.getElementById('feedback'); 
+
+
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
+const signupBtn = document.getElementById('signupBtn');
+const signinBtn = document.getElementById('signinBtn');
+const inputName = document.getElementById('inputName');
+const inputEmail = document.getElementById('inputEmail');
+const inputPassword = document.getElementById('inputPassword');
+
+
+signupBtn.addEventListener('click', () => {
+    const name = inputName.value.trim();
+    const email = inputEmail.value.trim();
+    const password = inputPassword.value.trim();
+
+    if (!name || !email || !password) {
+        alert("Input fields empty.");
+        return;
+    }
+
+    const existingUser = users.find(u => u.email === email);
+    if (existingUser) {
+        alert("A user with this email already exists. Please sign in.");
+        return;
+    }
+
+    
+    users.push({ name, email, password });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert(`Thank you, ${name}, for signing up!`);
+    clearInputFields(); 
+    window.location.href = "node.html";
+});
+
+
+signinBtn.addEventListener('click', () => {
+    const email = inputEmail.value.trim();
+    const password = inputPassword.value.trim();
+
+    if (!email || !password) {
+        alert("Input fields empty.");
+        return;
+    }
+
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+        alert(`Welcome back, ${user.name}!`);
+        clearInputFields(); 
+        window.location.href = "node.html";
+    } else {
+        alert("Invalid email or password.");
+    }
+});
+
+
+function clearInputFields() {
+    inputName.value = "";
+    inputEmail.value = "";
+    inputPassword.value = "";
+}
+
+
+signupBtn.onclick = function () {
+    nameField.style.maxHeight = "65px"; 
+    tittle.innerHTML = "Sign Up";
+    signupBtn.classList.remove("disabled");
+    signinBtn.classList.add("disabled");
+};
+
+signinBtn.onclick = function () {
+    nameField.style.maxHeight = "0"; 
+    tittle.innerHTML = "Sign In";
+    signupBtn.classList.add("disabled");
+    signinBtn.classList.remove("disabled");
+};
+
+
+if (users.length > 0) {
+    signinBtn.classList.remove('disabled');
+}
 
 
 signinBtn.onclick = function () {
