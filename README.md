@@ -1,2 +1,1 @@
-# Hackathon
-Hackathon
+Plotify X is a powerful tool designed to help land buyers verify ownership and legitimacy of properties before making a purchase. By leveraging reliable data and validation mechanisms, it minimizes the risk of scams and fraudulent transactions, ensuring a safe and transparent land-buying experience.
